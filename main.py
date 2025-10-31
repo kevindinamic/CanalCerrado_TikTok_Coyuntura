@@ -4,7 +4,7 @@ import subprocess
 def run_script(script_name):
     # This function will run the script
     try:
-        subprocess.run(["python", script_name], check=True)
+        subprocess.run(["python3", script_name], check=True)
     except subprocess.CalledProcessError as e:
         print(f"An error occurred while running {script_name}: {e}")
 
@@ -24,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
