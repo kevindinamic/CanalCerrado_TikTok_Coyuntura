@@ -1,0 +1,26 @@
+Hola Erick te dejo a continuación algunas consideraciones sobre el código y dudas que me han surgido:
+
+1) El actor que scrapea los comentarios de un video de tiktok tiene un parámetro sobr el número de comentarios a scrapear, justo ahora lo dejé fijo en 1000, ya que la amyor cantidad de comentarios que
+vi en un video fue de 600. Pero entiendo que los videos con el tiempo se podrían ir llenando de más y más comentarios por lo que pienso que: tenemos que fijar un número muy alto de comentarios o ir
+actualizando cada cierto tiempo con más.
+
+2) Otra cosa, en el código tenemos un filtro para solo dejar los posts hasta de una semana anterior, pero platicamos hoy sobre que podría haber posts viejos donde se siga comentando mucho debido a su
+alta relevancia. Entonces, podemos subir el nuḿero de semanas que considera hacia el pasado  o no. Si no lo subimos estaremos ignorando más y más viejos posts, pero si queremos seguir considerando 
+todos o la mayoría de ellos tendremos que ir subiendo el número de posts, ya sea de manera automática o dejando un número fijo grande de semanas a considerar hacia el pasado. Hay veces que postean 
+videos cada día, y otras veces se dejan una semana sin subir nada. Podemos agregar un contador que suba una semana hacia el pasado cada que haya 4 o 7 nuevas posts, o pensar otras ideas también
+utilizando las fechas de las nuevas publicaciones. 
+
+
+3) Ahorita que estuve cargando una mayor cantidad de comments me arrojó un mensaje sobre el límite de comments que se pueden enviar al chatbot. No hay problema con este límite más que al inicio que se
+quieran enviar todos los comentarios de todos los posts que ya existen, pero conforme se vaya actualizando no va a sobrepasar ese límite. 
+
+
+
+Notas Erick:
+15 de Agosto, 2024
+1. .env los tokens deben ir entre " "
+2.  # Check if the post has already been seen
+            if post_id not in seen_posts and post_id is not None:
+
+3. Limpiar el código. comments?bg.py Tiene comentado módulos de posts_bg. 
+4. Max comments por post: 50
